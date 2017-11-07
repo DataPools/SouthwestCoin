@@ -828,13 +828,13 @@ uint256 static GetOrphanRoot(const CBlock* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 1 * COIN;
-
+    int64 nSubsidy = 30 * COIN;
+    nSubsidy >>= (nHeight / 500000); //SouthwestCoin cut subsidy every 500000 blocks
     return nSubsidy + nFees;
 }
 
-static const int64 nTargetTimespan = 1 * 24 * 60 * 60; // SouthwestCoin: 1 days
-static const int64 nTargetSpacing = 120; // SouthwestCoin: 2 minute blocks
+static const int64 nTargetTimespan = 1 * 24 * 60 * 60 * 5; // SouthwestCoin: 5 days
+static const int64 nTargetSpacing = 300; // SouthwestCoin: 5 minute blocks
 static const int64 nInterval = nTargetTimespan / nTargetSpacing;
 
 // Thanks: Balthazar for suggesting the following fix
@@ -2002,7 +2002,7 @@ bool LoadBlockIndex(bool fAllowNew)
     
         
         // Genesis block
-        const char* pszTimestamp = "Traditionally one puts something timely here coinciding with the epoch";
+        const char* pszTimestamp = "Data tool helps Clark County schools boost graduation rates";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -2014,13 +2014,13 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1300000000; //epochtime
+        block.nTime    = 1510088098; //epochtime
         block.nBits    = 0x1e0ffff0;
         block.nNonce   = 0;
 
         if (fTestNet)
         {
-            block.nTime    = 1300000000;
+            block.nTime    = 1510088098;
             block.nNonce   = 0;
         }
 
