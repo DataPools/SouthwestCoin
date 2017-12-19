@@ -24,7 +24,8 @@ namespace Checkpoints
     //
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of // Yo dawg, this is the secret. Checkpoint 0 hash == Genesis block hash.
-        (         0, uint256("0x"))
+        (         0, uint256("0x12b14cbb6d4c795e8b04f349385ff328f03643812776c53395c79222066aaeb7
+"))
         ;
 
     bool CheckBlock(int nHeight, const uint256& hash)
