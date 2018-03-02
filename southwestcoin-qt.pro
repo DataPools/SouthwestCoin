@@ -364,5 +364,6 @@ contains(RELEASE, 1) {
 }
 
 system($$QMAKE_LRELEASE -silent $$_PRO_FILE_)
-
+QMAKE_CXXFLAGS += -msse2 -w  -stdlib=libstdc++
+QMAKE_CFLAGS += -msse2 -stdlib=libstdc++ -w
 
