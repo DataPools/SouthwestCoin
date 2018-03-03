@@ -364,6 +364,3 @@ contains(RELEASE, 1) {
 }
 
 system($$QMAKE_LRELEASE -silent $$_PRO_FILE_)
-macx:QMAKE_CXXFLAGS += -msse2 -w  -stdlib=libstdc++
-macx:QMAKE_CFLAGS += -msse2 -stdlib=libstdc++ -w
-
