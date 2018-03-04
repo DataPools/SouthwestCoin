@@ -1,3 +1,7 @@
 src/southwestcoind
 *.dmg
 *.app
+build/
+*.qm
+Makefile
+qrc_bitcoin.cpp
