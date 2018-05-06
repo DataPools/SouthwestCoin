@@ -1,7 +1,4 @@
 SouthwestCoin (SWC)
 ===========
 
-[![Build Status](https://travis-ci.org/RazorLove/southwestcoin.png?branch=master)](https://travis-ci.org/RazorLove/southwestcoin)
-
-
-Scrypt Hashcash PoW Template
+My own coin created for educational purposes. If you would like to run a SouthwestCoin node, please file an issue here so I can add it as to the SouthwestCoin DNS.
